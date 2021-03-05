@@ -56,21 +56,3 @@ function createGraph(directed = false) {
     },
   };
 }
-
-const graph = createGraph(true);
-graph.addNode("Ani");
-graph.addNode("Banu");
-graph.addNode("Cindy");
-graph.addNode("Dina");
-graph.addNode("Elisa");
-graph.addNode("Fadli");
-
-graph.addEdges("Ani", "Banu");
-graph.addEdges("Banu", "Cindy");
-graph.addEdges("Banu", "Dina");
-graph.addEdges("Ani", "Dina");
-graph.addEdges("Dina", "Fadli");
-graph.addEdges("Elisa", "Fadli");
-graph.addEdges("Fadli", "Ani");
-
-// console.log(graph.print());
