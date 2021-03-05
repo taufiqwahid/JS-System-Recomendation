@@ -52,6 +52,7 @@ function createGraph(directed = false) {
       });
       return results;
     },
+
     print: function () {
       return nodes
         .map(function ({ key, neighbors }) {
