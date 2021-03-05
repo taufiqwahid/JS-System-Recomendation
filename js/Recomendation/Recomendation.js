@@ -82,4 +82,7 @@ for (let i = 0; i < user2.length - 1; i++) {
   graph.addEdges(user2[i], user2[i + 1]);
 }
 
+const recomendation = graph.recommend();
+
 console.log(graph.print());
+console.log(recomendation);

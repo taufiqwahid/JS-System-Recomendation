@@ -33,11 +33,24 @@ function createGraph(directed = false) {
       const node1 = this.getNode(node1key);
       const node2 = this.getNode(node2key);
       node1.addNeighbor(node2);
-      console.log(node1);
 
       if (!directed) {
         node2.addNeighbor(node1);
       }
+    },
+
+    recommend: function () {
+      let results = {};
+      nodes.map(function ({ key, neighbors }) {
+        let itemId = key.id;
+        if (neighbors.length) {
+          results[itemId] = neighbors.map(function (neighbor) {
+            return neighbor.key;
+          });
+        }
+        return itemId;
+      });
+      return results;
     },
     print: function () {
       return nodes
