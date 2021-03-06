@@ -1,4 +1,4 @@
-const user1 = [
+const item1 = [
   {
     id: 1,
     title: "Jurassic Park Original Bones Backpack",
@@ -31,7 +31,7 @@ const user1 = [
   },
 ];
 
-const user2 = [
+const item2 = [
   {
     id: 2,
     title: "Sonnic The Hedgehoc Adult UniSex Gaiter",
@@ -66,23 +66,26 @@ const user2 = [
 
 const graph = createGraph(false);
 
-//USER1
-for (let i = 0; i < user1.length; i++) {
-  graph.addNode(user1[i]);
+//item1
+for (let i = 0; i < item1.length; i++) {
+  graph.addNode(item1[i]);
 }
-for (let i = 0; i < user1.length - 1; i++) {
-  graph.addEdges(user1[i], user1[i + 1]);
+for (let i = 0; i < item1.length - 1; i++) {
+  graph.addEdges(item1[i], item1[i + 1]);
 }
 
-//USER2
-for (let i = 0; i < user2.length; i++) {
-  graph.addNode(user2[i]);
+//item2
+for (let i = 0; i < item2.length; i++) {
+  graph.addNode(item2[i]);
 }
-for (let i = 0; i < user2.length - 1; i++) {
-  graph.addEdges(user2[i], user2[i + 1]);
+for (let i = 0; i < item2.length - 1; i++) {
+  graph.addEdges(item2[i], item2[i + 1]);
 }
 
 const recomendation = graph.recommend();
+const allItem = item1.concat(item2);
+allItem.splice(5, 1);
+allItem.splice(8, 1);
 
-console.log(graph.print());
-console.log(recomendation);
+// console.log(graph.print);
+// console.log(recomendation);
