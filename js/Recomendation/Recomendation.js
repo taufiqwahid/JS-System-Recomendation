@@ -87,5 +87,5 @@ const allItem = item1.concat(item2);
 allItem.splice(5, 1);
 allItem.splice(8, 1);
 
-// console.log(graph.print);
-// console.log(recomendation);
+console.log("Get All Product :", allItem);
+console.log("Get All Recomendation Product", recomendation);
